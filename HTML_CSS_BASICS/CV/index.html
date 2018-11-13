@@ -4,63 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
     <title>CV de HectorIP</title>
     <style>
         *{
             font-family: sans-serif;
-            border: dashed 1px blue;
-            /* border: none !important; /* shame.css */
+            /* border: dashed 1px blue; */
+            border: none !important;
         }
         body{
             border: none;
+            overflow-x: hidden;
+            height: 100%;
+            margin: 0px !important;
         }
         p {
             border: solid 1px purple;
         }
-        img {
-            width: 100px;
-        }
         div {
             border: 1px solid orange;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+            box-sizing: border-box;
         }
         span {
             font-weight: bold;
         }
+
         #cabecera div { /* descendientes */
             display: inline-block;
-            /* position:  */
-            width: 500px;
         }
+        #photo-container{
+            width: 35%;
+        }
+        #title-container{
+            width: 64%;
+        }
+        #photo-container img{
+            height: 200px;
+        }
+        #container {
+            max-width: 1000px;
+            overflow: hidden;
+            border: red solid 1px;
+            /* padding-top: 1px; */
+            margin: 20px auto;
+        }
+        #top-bar, #footer-info{
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 20px;
+            
+        }
+        #footer-info{
+            position: relative;
+            top: 0px;
+            /* bottom: 0px; */
+        }
+
+        /* Fixed & absoulute -> Pantalla */
+        /* Relative -> Contenedor padre relative -> Body o documento */
+        /* static -> Flujo normal */
     </style>
 </head>
 <body>
-    <div id="cabecera">
-        <div>
-            <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/2001aspaceodyssey-hal9000-closeup-700x300.jpg" alt="">
+    <div id="top-bar">
+        CV
+    </div>
+    <div id="container">
+        <div id="cabecera">
+            <div id="photo-container">
+                <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/2001aspaceodyssey-hal9000-closeup-700x300.jpg" alt="">
+            </div>
+            <div id="title-container">
+                <h1> Héctor Iván </h1> 
+                <h2> Programador </h2>
+            </div>
         </div>
-        <div>
-            <h1> Héctor Iván </h1>
-            <h2> Programador</h2>
+        
+        <div class="section">
+            <h3> Nombre de la sección</h3>
+            <div class="section-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolores illum iste quis itaque laboriosam, sapiente quia perspiciatis at minima a enim optio aliquid dolorem doloremque in sequi explicabo eveniet!
+            </div> 
         </div>
+        <div class="section">
+            <h3> Nombre de la sección 2</h3>
+            <div class="section-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolores illum iste quis itaque laboriosam, sapiente quia perspiciatis at minima a enim optio aliquid dolorem doloremque in sequi explicabo eveniet!
+            </div> 
+        </div>
+        <div class="section">
+            <h3> Nombre de la sección 3</h3>
+            <div class="section-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolores illum iste quis itaque laboriosam, sapiente quia perspiciatis at minima a enim optio aliquid dolorem doloremque in sequi explicabo eveniet!
+            </div> 
+        </div>            
     </div>
-    
-    
-    <p> Descripción 1</p>
-    <p> Descripción 2</p>
 
-    <div>
-       
+    <div id="footer-info">
+        FOOTER
     </div>
-    
-
-    <div>
-        <img src="https://res.cloudinary.com/teepublic/image/private/s--QG-9tO9i--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1446191363/production/designs/132014_0.jpg" alt="">
-    </div>
-
-    <p>
-        Lorem ipsum <span> dolor sit amet consectetur </span>, adipisicing elit. Ea facilis eius quisquam aut perferendis molestiae aspernatur, libero, voluptate ullam ipsa maxime nulla, tenetur sequi numquam nihil nam! Temporibus, voluptatum reprehenderit?
-    </p>
 
 </body>
 </html>
