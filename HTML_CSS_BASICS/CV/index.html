@@ -4,72 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>CV de HectorIP</title>
-    <style>
-        *{
-            font-family: sans-serif;
-            /* border: dashed 1px blue; */
-            border: none !important;
-        }
-        body{
-            border: none;
-            overflow-x: hidden;
-            height: 100%;
-            margin: 0px !important;
-        }
-        p {
-            border: solid 1px purple;
-        }
-        div {
-            border: 1px solid orange;
-            padding: 0px;
-            margin: 0px;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-        span {
-            font-weight: bold;
-        }
-
-        #cabecera div { /* descendientes */
-            display: inline-block;
-        }
-        #photo-container{
-            width: 35%;
-        }
-        #title-container{
-            width: 64%;
-        }
-        #photo-container img{
-            height: 200px;
-        }
-        #container {
-            max-width: 1000px;
-            overflow: hidden;
-            border: red solid 1px;
-            /* padding-top: 1px; */
-            margin: 20px auto;
-        }
-        #top-bar, #footer-info{
-            background-color: black;
-            color: white;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 20px;
-            
-        }
-        #footer-info{
-            position: relative;
-            top: 0px;
-            /* bottom: 0px; */
-        }
-
-        /* Fixed & absoulute -> Pantalla */
-        /* Relative -> Contenedor padre relative -> Body o documento */
-        /* static -> Flujo normal */
-    </style>
 </head>
 <body>
     <div id="top-bar">
@@ -78,7 +14,7 @@
     <div id="container">
         <div id="cabecera">
             <div id="photo-container">
-                <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/2001aspaceodyssey-hal9000-closeup-700x300.jpg" alt="">
+                <img src="img/profile.jpg" alt="Imagen de HAL9000">
             </div>
             <div id="title-container">
                 <h1> Héctor Iván </h1> 
@@ -103,8 +39,55 @@
             <div class="section-content">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolores illum iste quis itaque laboriosam, sapiente quia perspiciatis at minima a enim optio aliquid dolorem doloremque in sequi explicabo eveniet!
             </div> 
-        </div>            
+        </div>
+        
+        <h3>Contáctame</h3>
+
+        <form action="https://postman-echo.com/post" method="POST" >
+            <!-- Envíar datos a un servidor -->
+            <!-- GET  a la misma URL -->
+            <legend> Por favor rellena este formulario si quieres ponerte en contacto conmigo. </legend>
+            
+            <fieldset>
+                
+                <div class="form-row">
+                    <label for="nombre"> Nombre </label>
+                    <input type="text" name="nombre" />
+                </div>
+
+                <div class="form-row">
+                    <label for="apellido"> Apellido </label>
+                    <input type="text" name="apellido">
+                </div>
+                 <div class="form-row">
+                    <label for="edad"> Edad </label>
+                    <input type="text" name="edad">
+                 </div>
+
+
+                <label for="pass"> Crea un password </label>
+                <input type="password" name="pass" />
+                
+                <label for="mayor_de_edad"> Mayor de edad </label>
+                <input type="checkbox" name="mayor_de_edad" />
+
+                <label for="sexo">Hombre</label>
+                <input type="radio" name="sexo" value="Hombre" />
+
+                <label for="sexo">Mujer</label>
+                <input type="radio" name="sexo" value="Mujer" />
+                
+                <label for="sexo">No binario</label>
+                <input type="radio" name="sexo" value="No binario" />
+
+                <label for="comentario">Qué quieres decir</label>
+                <textarea name="comentario"></textarea>
+            </fieldset>
+            <input type="submit" value="Contactar" />
+        </form>
+
     </div>
+
 
     <div id="footer-info">
         FOOTER
